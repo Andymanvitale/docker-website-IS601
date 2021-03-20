@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Virtualization</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+</head>
+<body>
+<style>body {
+  font: 400 15px/1.8 Montserrat, sans-serif;
+  color: #444444;
+}
+</style>
+
+<div class="container text-center">
+    <br>
+    <h2>What is Virtualization?</h2>
+    <hr>
+    <p>In simple terms, virtualization allows someone to do something on a machine, while the main purpose of the machine is something different.
+    More specifically, virtualization gives the ability for software developers to run multiple instances of their code on a single machine and see
+    how each one reacts independently. Each of the machines are isolated from one another, so the effects of one will not alter the others.<br><br>
+    According to redhat.com, the idea of virtualization came in the 1960's, but it wasn't widely used until the early 2000's. There are multiple uses
+    for virtualization. One of the uses could be for testing software, another use could be partitioning a machine to run as a server and having
+    the partition be dedicated to the one task. The most well known virtualization task is creating a virtual desktop. This allows someone
+    to run a desktop on their machine that is separate from their main desktop. Like the other examples, the machine will be partitioned and it will
+    have resources allocated specifically to that task and be separate from the main machine.
+    <br><br>
+    This example from redhat.com shows how virtualization can be used to minimize the amount of infrastructure required for multiple tasks</p><br>
+    <img src="img/server-usage.png">
+    <p>In this image, there are three machines which each run at a third of their capacity and have their own task. Running each task this way
+    requires all three machines to be present. Instead of running each task this way, a virtual environment could be used to condense tasks down into two
+    machines</p><br>
+
+    <img src="img/server-virtual.png">
+
+    <p>In the second image, a virtual environment is established on the first machine and it allows for two tasks to be run on a single machine. The machines
+    are partitioned, so each of the tasks are getting 30% of the machine's resources, just as they did while they each ran on their own machines. Using two
+    machines instead of three could reduce upkeep demands and decreases the amount of physical hardware required to maintain each task. Using virtualization in
+    this way is extremely effective.</p><br>
+
+    <h3>How virtualization works</h3> <br>
+    <p>Virtualization works by using software called hypervisors. The role of hypervisors is to separate physical memory from the resources allocated to the
+    virtual environment, and then utilize those allocated resources for the virtual environment.</p><br>
+    <img src="img/hypervisor.png"> <br><br>
+    <p>In this image, it can be seen how the hypervisor separates each of the tasks that the virtual machines will be used for. The three physical
+    machines will be used for 4 virtual machines, and they will be partitioned and ran separate from one another and do not rely on one another.</p>
+
+<br><br><br><br>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
