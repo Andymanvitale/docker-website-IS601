@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Containerization</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+</head>
+<body>
+<style>body {
+  font: 400 15px/1.8 Montserrat, sans-serif;
+  color: #444444;
+}
+</style>
+
+<!--Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="virtualization.html">Virtualization</a></li>
+        <li><a href="containerization.html">Containerization</a></li>
+        <li><a href="compare.html">Virtualization vs Containerization</a></li>
+      </ul>
+    </div>
+  </div>
+
+<div class="container text-center">
+    <br>
+    <h2>What is Containerization?</h2>
+    <hr>
+    <p>Containerization is the alternative way of creating a virtual machine, but doesn't supply you with the extra features that comes with a virtual machine.
+        This allows someone who wants to run multiple programs across the same operating systems the ability to do so, and they could test their software without
+        the need to set up an entire virtual machine.<br><br>
+        Having a container allows someone to create a portable and low-resource tool which will run their desired programs. These programs are all created on an
+        operating system and run through a Runtime engine. The runtime engine is the tool that allows the programs to run. Each of the containers are created
+        with something like Docker, and the images gathered are what allow the dockerfile to run successfully. As each of the containers run, they all take up a small
+        amount of resources, and they can be developed one at a time without having an effect on one another. <br><br></p>
+    <img src="img/container.jpg">
+    <br><br>
+    <p>In this picture, it can be seen how the host OS is where everything is run. Following that, the container engine is
+    something like Docker. Each app is run through the run-time system and it creates 3 different environments specifically running only the application.</p>
+    These are small and modular, and allow for easy access and changes to be made without having to restart an entire virtual environment.
+
+
+<br><br><br><br>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
