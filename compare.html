@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Containerization vs Virtualization</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+</head>
+<body>
+<style>body {
+  font: 400 15px/1.8 Montserrat, sans-serif;
+  color: #444444;
+}
+</style>
+
+<div class="container text-center">
+    <br>
+    <h2>What's the Difference?</h2>
+    <hr>
+    <p>When comparing the two, each clearly has a benefit over the other for specific purposes. For example, if you wanted multiple copies of the same product
+    but didn't want to go through the hassle of having multiple virtual environments, then using a container would allow for changes to be made and the resources
+    required for it would be not nearly as great as a virtual environment would require.<br><br>
+    The benefits of a virtual environment is that having allocated resources for each partition would allow for each of them to run on their own operating system
+    in the virtual environment. If this is something that could be a benefit, for example testing something which is resource heavy and dependent on many functions
+    of the OS, then using a virtual environment would be best. Looking at security, the winner goes to virtualization. Having each application run on an
+    independent OS allows for the traffic of it to go through that OS instead of the host OS. <br><br>
+    On the other hand, using a container is better if there is a smaller project that doesn't require as many resources or apps to run. When setting up a container,
+    you have the option to choose which processes to run and it allows for a more streamlined service. Having that modularity allows for faster start times and
+    less resource requirements. Unfortunately, using a container to run software would mean that everything still flows through the main operating system and is
+        at the mercy of the security features of the OS.</p><br><br><hr>
+
+    <div class="col-md-6">
+        <div class="card">
+        <img src="img/virtualization-daigram.jpg" class="card-img-top">
+            <h3 class="card-title">Virtualization</h3>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card">
+        <img src="img/container.jpg" class="card-img-top">
+            <h3 class="card-title">Containerization</h3>
+        </div>
+    </div>
+
+    <br><br>
+
+<br>
+</div>
+<<div class="container text-center">
+    <p>Comparing these two images, they have similarities and differences. On the left, the virtualization begins at the host OS and moves into the hypervisor. This
+    is what partitions and allocates resources to be used for each independent OS as they run. They are each resource heavy and demand more than a container. <br><br>
+    On the right, the containerization example begins at the Host OS just as the other does. It moves into a container engine, such as Docker, and that is what
+    you can use to build images to run the needed applications. Each of these run independently just like the virtual environments, but they are not run on their
+    own operating systems, they are instead run through a Linux window and run on the host OS, whatever it might be.</p>
+</div>
+<br><br><br><br>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
