@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Connect Docker with Pycharm to write python code</title>
+</head>
+
+
+<nav class="navbar navbar-expand-lg navbar-light .bg-light" style="background-color: #ffc107;">
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active lead" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active lead" aria-current="page" href="virtualization.html">Virtualization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active lead" aria-current="page"
+                       href="Containerization.html">Containerization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active lead" aria-current="page" href="compare.html">Virtualization vs
+                        Containerization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active lead" aria-current="page" href="setup-webserver.html">Setup web server
+                        using docker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active lead" aria-current="page" href="linux-commands.html">Basic Linux commands
+                        and login to docker container</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active lead" aria-current="page" href="docker-pycharm.html">Connect Docker with
+                        Pycharm</a>
+                </li>
+
+
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<body>
+<div class="container">
+
+    <div class="card mb-8" style="max-width: 1080px;">
+        <h6 class="card-title display-4">A tutorial about how to connect Docker with Pycharm to write python code.</h6>
+
+        <div class="col-md-8">
+            <div class="card-body">
+                <p class="card-text">This tutorial is aimed to show you how to set up a basic Docker-based Python development environment in PyCharm.<br>
+				Project structure: For this tutorial I’m using datamatrix project with just 2 files:
+                    <li>A Dockerfile to generate the container.</li>
+                    <li>A my_script.py file that contains some code to run.</li>
+                    </p>
+				<p class="card-text">Dockerfile:<br>
+				Create a new text file called Dockerfile with no extension and add below lines:
+				<div><code>FROM python:3<br>
+
+                      ADD my_script.py /<br>
+
+                      RUN pip install pystrich<br>
+
+                      CMD [ "python", "./my_script.py" ]<br>
+					  </code></div>
+					<li> FROM tells Docker which image you base your image on.</li>
+                    <li> RUN tells Docker which additional commands to execute.</li>
+                    <li> CMD tells Docker to execute the command when the image loads.</li>
+				</p>
+				<p class="card-text">The Python script my_script.py looks like the following:
+				<div><code># Sample taken from pyStrich GitHub repository<br>
+                           # https://github.com/mmulqueen/pyStrich<br>
+						    from pystrich.datamatrix import DataMatrixEncoder<br>
+
+                            encoder = DataMatrixEncoder('This is a DataMatrix.')<br>
+                            encoder.save('./datamatrix_test.png')<br>
+                            print(encoder.get_ascii())<br>
+					  </code></div>
+					  </p>
+				<p class="card-text">Setting up PyCharm:<br>
+				Using a remote Python interpreter from Docker is available only on PyCharm Professional. So, let’s see how to set it up.<br>
+				Once you’ve built your Docker image and opened your project folder in PyCharm navigate to File > Settings > Project > Python Interpreter.
+				<div class="col-md-8">
+                                    <img src="img/pycharm.png" style="max-width: 700px;">
+                                </div>
+								</p>
+				<p class="card-text">Now click on the little gear near the top-right and add a new Python interpreter.
+                Here you will need to select Docker and choose the image name you selected before in the drop-down menu called Image name like in below screenshot:
+				<div class="col-md-8">
+                                    <img src="img/remote-interpreter.png" style="max-width: 700px;">
+                                </div>
+				</p>
+				<p class="card-text">At this point, configure the Run/Debug configuration to have Docker and run the python script on pycharm:<br>
+				 Go on to Add Configurations and click on '+' sign and slect docker > Dockerfile. select Dockerfile from the dropdown add name and image tag as shown below:
+				<div class="col-md-8">
+                                    <img src="img/configurations.png" style="max-width: 700px;">
+                                </div>
+				</p>
+				<p class="card-text">Click on run or green icon to run the python script to see output under console. <br>
+				 
+				<div class="col-md-8">
+                                    <img src="img/run.png" style="max-width: 700px;">
+                                </div>
+								<div class="col-md-8">
+                                    <img src="img/output.png" style="max-width: 700px;">
+                                </div>
+				</p>
+			
+
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+
+
+    <br><br><br><br>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>
