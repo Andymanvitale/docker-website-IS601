@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Basic Linux commands and login to docker container</title>
+</head>
+
+
+<nav class="navbar navbar-expand-lg navbar-light .bg-light" style="background-color: #ffc107;">
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active lead" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active lead" aria-current="page" href="virtualization.html">Virtualization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active lead" aria-current="page"
+                       href="Containerization.html">Containerization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active lead" aria-current="page" href="compare.html">Virtualization vs
+                        Containerization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active lead" aria-current="page" href="setup-webserver.html">Setup web server
+                        using docker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active lead" aria-current="page" href="linux-commands.html">Basic Linux commands
+                        and login to docker container</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active lead" aria-current="page" href="docker-pycharm.html">Connect Docker with
+                        Pycharm</a>
+                </li>
+
+
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<body>
+<div class="container">
+
+    <div class="card mb-8" style="max-width: 1080px;">
+        <h6 class="card-title display-4">A list of basic Linux commands and what they do and how to log into your docker container.</h6>
+
+        <div class="col-md-8">
+            <div class="card-body">
+                <p class="card-text">Linux is an operating system's kernel. You might have heard of UNIX. Well, Linux is a UNIX clone. But it was actually created by Linus Torvalds from Scratch. Linux is free and open-source, that means that you can simply change anything in Linux and redistribute it in your own name! There are several Linux Distributions, commonly called “distros”.
+				   
+                    <li>Ubuntu Linux</li>
+                    <li>Red Hat Enterprise Linux</li>
+                    <li>Linux Mint</li>
+					<li>Debian</li>
+					<li>Fedora</li>
+                    </p>
+				<p class="card-text">Linux is Mainly used in servers. About 90% of the internet is powered by Linux servers. This is because Linux is fast, secure, and free! The main problem of using Windows servers are their cost. This is solved by using Linux servers. The OS that runs in about 80% of the smartphones in the world, Android, is also made from the Linux kernel. Most of the viruses in the world run on Windows, but not on Linux!</p>
+				<p><b>Linux basic commands</b>
+                        <ul>
+                            <li>pwd: Stands for Print working directory. It gives the absolute path, which means the path that starts from the root.</li>
+                            <li>ls: Gives listing in current directory. You can see all the hidden files by using the command "ls -a".</li>
+                            <li>cd: Used to navigateion between directories and folders. To go back from a folder to the folder before that, you can type "cd .." . "cd /" takes to root directory.</li>
+                            <li>cp: Used to copy files. It takes two arguments: The first is the location of the file to be copied, the second is where to copy.</li>
+                            <li>rm: Used to remove or delete files. Use "rm -r" to delete just the directory. </li>
+							<li>mkdir & rmdir: Use mkdir command when you need to create a folder or a directory. Use rmdir to delete an empty directory.</li>
+							<li>man & --help: To know more about a command and how to use it, use the man command "man cd". "cd -help" show which ways the command can be used.</li>
+							<li>locate: Used to locate a file in a Linux system</li>
+							<li>echo: Helps to move some data, usually text into a file. "echo hello, my name is Sowmya >> new.txt"</li>
+							<li>cat: Used to display the contents of a file. It is usually used to easily view programs.</li>
+							<li>nano, vi: nano and vi are already installed text editors in the Linux command line. <b>nano</b> is a good text editor that denotes keywords with color and can recognize most languages. <b>vi</b> is simpler than nano. You can create a new file or modify a file using this editor.</li>
+							<li>df: Used to see the available disk space in each of the partitions in your system.</li>
+							<li>du: Used to know the disk usage of a file in your system.</li>
+							<li>apt-get: Use apt to work with packages in the Linux command line. Use apt-get to install packages.</li>
+							<li>hostname: Use hostname to know your name in your host or network.</li></ul>
+                            </p>
+				
+				<div class="card-body">
+                <p class="card-text"><b>How to log into your docker container.</b><br>
+				Connecting to a running Docker container is helpful when you want to see what is happening inside the container.
+				If the Docker container doesn’t work as expected, you can attach to the container or get a shell to the container and run commands such as "ps" or "top". You can also enter the container, install new packages, and build a new Docker image from it.<br>
+				There is a docker exec command that can be used to connect to a container that is already running.
+				<li>Use "docker ps" to get the name of the existing container.</li>
+				<li>Use the command "docker exec -it 'container name' /bin/bash" to get a bash shell in the container</li>
+				<li>Generically, use "docker exec -it 'container name' 'command'" to execute whatever command you specify in the container.</li>
+                    </p>
+
+            </div>
+			
+
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+
+
+    <br><br><br><br>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>
